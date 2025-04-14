@@ -16,119 +16,143 @@
     <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License" /> </a>
 </p>
 
-
 ## Table of Contents
 
 * [About The Project](#about-the-project)
   * [Built With](#built-with)
 * [Installation and usage](#installation-and-usage)
   * [Prerequisites](#prerequisites)
-  * [Installation](#installation-and-usage)
+  * [Installation](#installation)
   * [Usage](#usage)
+  * [Features](#features)
+  * [Athlete Data Files](#athlete-data-files)
+  * [Demo Data](#demo-data)
 * [Contributors](#contributors)
 * [License](#license)
 
-**Olympics Manager** est un programme codé en langage C qui permet à un entraîneur de consulter et analyser les performances de ses athlètes. L'entraîneur pourra notamment saisir de nouvelles performances et les analyser grâce à des outils de statistiques avancées.
 
-## Pré-requis
+## About The Project
 
-**Langage:** C
+**Olympics Manager** (`CER-J-O MANAGEMENT`) is a program written in C designed to help coaches monitor and analyze their athletes' performances. Coaches can record new training sessions and evaluate progress using advanced statistical tools.
 
-**Bibliothèques:** stdio.h, stdlib.h, string.h, unistd.h, sys/ioctl.h, errno.h, float.h, ctype.h, stdbool.h et dirent.h
+The application allows for managing multiple athletes, tracking their performance across various events over time, and provides insights into their progress and ranking.
 
+### Built With
 
-## Guide d’installation 
+*   **Language:** C
+*   **Standard Libraries:**
+    *   `stdio.h`
+    *   `stdlib.h`
+    *   `string.h`
+    *   `unistd.h`
+    *   `sys/ioctl.h` (Likely for `system("clear")` or terminal size - may vary)
+    *   `errno.h`
+    *   `float.h`
+    *   `ctype.h`
+    *   `stdbool.h`
+    *   `dirent.h` (For loading athlete files from the directory)
+*   **Custom Headers:**
+    *   `function.h`
+    *   `file.h` (Implied - handles file operations)
 
-Pour compiler et lancer le projet, utiliser ceci dans votre terminal :
+## Installation and usage
 
-1 - **Compiler le programme**
-```bash
-  gcc -o main main.c functions.c file.c -I.
-```
-2 - **Executer le programme**
-```bash
-./main
-```
-## Fonctionnalité
+Follow these steps to get the Olympics Manager running on your system.
 
-1. **Ajouter un nouvel athlète**
-  - Permet d'ajouter un nouvel athlète avec un nom unique. Si un athlète avec ce nom existe déjà, une alerte sera affichée.
+### Prerequisites
 
-2. **Ajouter une performance pour un athlète**
-  - Permet d'ajouter une nouvelle performance (date, type d'épreuve, temps et position relais si applicable) pour un athlète existant.
+*   A C compiler (like GCC) installed on your system.
+*   The standard C libraries listed under [Built With](#built-with).
 
-3. **Afficher les statistiques des athlètes**
-  - Rechercher les statistiques des athlètes par nom, date ou type d'épreuve.
+### Installation
 
-4. **Afficher l'historique des performances d'un athlète**
-  - Affiche l'historique complet des performances pour un athlète donné.
+1.  Clone the repository (if applicable) or ensure all source files (`main.c`, `functions.c`, `file.c`, `function.h`, `file.h`, etc.) are in the same directory.
+2.  Open your terminal in the project directory.
+3.  Compile the program using GCC:
+    ```bash
+    gcc -o main main.c functions.c file.c -I.
+    ```
+    *Note: Ensure `functions.c` and `file.c` contain the implementation for the functions declared in their respective header files.*
 
-5. **Comparer les performances d'un athlète entre deux dates**
-  - Compare et affiche la différence de performance d'un athlète entre deux dates spécifiées pour une épreuve donnée.
+### Usage
 
-6. **Calculer les statistiques pour un athlète dans une épreuve**
-  - Affiche le meilleur, le pire et le temps moyen pour une épreuve donnée d'un athlète.
+1.  **Run the program:**
+    Execute the compiled program from your terminal:
+    ```bash
+    ./main
+    ```
+2.  **Navigate the Menu:**
+    Upon launching, you'll see the main menu:
+    ```
+    °ₒ°ₒ°    °ₒ°ₒ°    °ₒ°ₒ°    °ₒ°ₒ°    °ₒ°ₒ°    °ₒ°ₒ°    °ₒ°ₒ°    °ₒ°ₒ°    
 
-7. **Trouver les meilleurs athlètes pour une épreuve**
-  - Affiche les trois meilleurs athlètes pour une épreuve donnée basée sur les temps moyens de performance.
+                 CER-J-O MANAGEMENT 
 
+    °ₒ°ₒ°    °ₒ°ₒ°    °ₒ°ₒ°    °ₒ°ₒ°    °ₒ°ₒ°    °ₒ°ₒ°    °ₒ°ₒ°    °ₒ°ₒ°    
 
+    1. Ajouter un nouvel athlète
+    2. Ajouter une performance pour un athlète
+    3. Consulter l'historique des entraînements
+    4. Consulter les statistiques sur les athlètes
+    5. Quitter
+    =====================================
+    Entrez votre choix: 
+    ```
+    Enter the number corresponding to the action you want to perform.
 
+3.  **Follow Prompts:** The program will guide you through each selected option, asking for necessary information like athlete names, dates, event types, and times.
 
-## Guide d'utilisation
+### Features
 
-1. **Lancer le programme**
-  - Après avoir exécuté `./main`, vous serez présenté avec un menu principal où vous pouvez choisir différentes actions, telles que gérer les athlètes, ajouter des performances, et consulter les statistiques.
+The program offers the following functionalities accessible via the main menu:
 
-2. **Naviguer dans le menu**
-  - Utilisez les numéros correspondant aux options de menu pour naviguer dans les différentes fonctionnalités du programme.
+1.  **Ajouter un nouvel athlète:**
+    *   Allows adding a new athlete by name. Creates a corresponding `.txt` file.
+    *   Prevents adding an athlete if a file with that name already exists.
+2.  **Ajouter une performance pour un athlète:**
+    *   Adds a new performance record (date, event type, time, relay position if applicable) to an existing athlete's file.
+    *   Includes validation for date format, time input, and relay position.
+3.  **Consulter l'historique des entraînements:**
+    *   Search and display performance history based on athlete name, date, or event type.
+4.  **Consulter les statistiques sur les athlètes (Advanced Stats Menu):**
+    *   **Afficher la progression d'un athlète:** Compare an athlete's performance between two specific dates for a given event.
+    *   **Afficher les statistiques d'un athlète pour une épreuve:** Calculate and display the best, worst, and average time for an athlete in a specific event.
+    *   **Qui envoyer au JO?:** Identify and display the top 3 athletes for a given event based on their average performance times.
+5.  **Quitter:** Exits the program.
 
-3. **Ajouter un nouvel athlète**
-  - Sélectionnez l'option pour ajouter un nouvel athlète, puis entrez le nom de l'athlète.
+### Athlete Data Files
 
-4. **Ajouter une performance**
-  - Sélectionnez l'option pour ajouter une performance, puis entrez le nom de l'athlète et les détails de la performance.
+Athlete data is stored in individual text files named after the athlete (e.g., `leonardo.txt`). The program automatically loads data from any `.txt` files present in its execution directory upon startup.
 
-5. **Afficher les statistiques**
-  - Sélectionnez l'option pour afficher les statistiques, puis choisissez le critère de recherche (nom, date ou type d'épreuve) et entrez les informations nécessaires.
-
-6. **Comparer les performances**
-  - Sélectionnez l'option pour comparer les performances, entrez le nom de l'athlète, l'épreuve et les deux dates à comparer.
-   
-## Fichiers
-
-**Voici une explication des fichiers liée à un athlète :**
+**File Format:**
 
 <img width="328" alt="Capture d’écran 2024-05-26 à 03 25 41" src="https://github.com/jkengineer42/CER-J-OManagement/assets/167258198/7c14f8b5-9370-4a25-894f-9465c5a8591d">
 
+1.  **Line 1:** Athlete's Name
+2.  **Line 2:** Total number of recorded performances.
+3.  **Subsequent Lines (one per performance):**
+    *   `Date (YYYY-MM-DD)`
+    *   `Event Type` (e.g., `100m`, `400m`, `5000m`, `marathon`, `relais 4 x 400 m`)
+    *   `Time (in seconds)` (float format)
+    *   `Relay Position` (integer 1-4, or 0 if not a relay event)
 
-    1. La première ligne représente le nom de l'athlète.
+### Demo Data
 
-    2. La deuxième ligne représente le nombre de performances enregistrées
+To help you get started and test the features, sample athlete files are provided:
 
-    3. Les lignes suivantes représente les caractérisitque des performances, respectivement : 
-    La date de la performance, le type d'épreuve, le temps en secondes, et enfin la position du relais, si l'épreuve n'est pas un relais, alors 0 est écrit.
+*   `lorenzo.txt`
+*   `leonardo.txt`
+*   `fabrizio.txt`
+*   `marco.txt`
 
-## Données de Démonstration
+Place these files in the same directory as the compiled `main` executable. The program will load them automatically.
 
-Pour vous aider à démarrer et à faire une démonstration, nous fournissons quatre fichiers d'athlètes avec des performances déjà pré-remplies. Ces fichiers vous permettront d'avoir des données réelles à analyser immédiatement.
+## Contributors
 
-Les fichiers fournis sont :
+*   **[@KUGANESAN Arun](https://www.github.com/)**
+*   **[@KONDA-MOUGNONGUI Jérémie](https://www.github.com/jkengineer42)**
+*   **[@BOUHOU Haytham](https://www.github.com/HAYTHAM2005)**
 
-1. **lorenzo.txt** : Contient les performances de l'athlète Lorenzo Patta.
-2. **leonardo.txt** : Contient les performances de l'athlète Leonardo Bonucci.
-3. **fabrizio.txt** : Contient les performances de l'athlète Fabrizio Donato.
-4. **marco.txt** : Contient les performances de l'athlète Marco Vaccari.
+## License
 
-Ces fichiers doivent être placés dans le même répertoire que l'exécutable main ou dans un répertoire spécifié par votre code. Ils seront automatiquement chargés lorsque vous exécuterez le programme.
-## Erreurs
-
-Des erreurs peuvent survenir lors de l'utilisation du programme, prenez en compte avant le lancement du programme.
-## Auteurs
-
-- [@KUGANESAN Arun](https://www.github.com/)
-- [@KONDA-MOUGNONGUI Jérémie](https://www.github.com/jkengineer42)
-- [@BOUHOU Haytham](https://www.github.com/HAYTHAM2005)
-
-
-
+Distributed under the MIT License. See `LICENSE` file for more information.
