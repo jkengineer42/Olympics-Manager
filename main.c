@@ -8,7 +8,7 @@ int main() {
     char input[10];  // buffer pour retenir l’entrée de l’utilisateur
     load_all_athletes(athletes, &athlete_count);
 
-    printf("★ Bienvenue sur l'outil de gestion"" " BLUE "OL" YELW "YM" BLACK "PI" GREEN "C" RED "S" CYAN "  MANAGER" RESET " ★\n\n"RESET);
+    printf("★ Bienvenue sur l'outil de gestion"" " BLUE "OL" YELW "YM" BLACK "PI" GREEN "C" RED "S" RED "  MANAGER" RESET " ★\n\n"RESET);
     system_clear();
 
     while (1) {
@@ -16,7 +16,7 @@ int main() {
             printf(BLUE "°" YELW "ₒ" BLACK "°" GREEN "ₒ" RED "°" RESET"  ");
         }
         printf("\n\n");
-        printf("                 " BLUE "OL" YELW "YM" BLACK "PI" GREEN "C" RED "S" CYAN " MANAGER \n\n"RESET);
+        printf("                 " BLUE "OL" YELW "YM" BLACK "PI" GREEN "C" RED "S" RED " MANAGER \n\n"RESET);
         for (int i = 0; i < 8; i++) {
             printf(BLUE "°" YELW "ₒ" BLACK "°" GREEN "ₒ" RED "°" RESET"  ");
         }
@@ -26,7 +26,7 @@ int main() {
         printf("3. Consulter l'historique des entraînements\n");
         printf("4. Consulter les statistiques sur les athlètes\n");
         printf("5. Quitter\n");
-        printf(CYAN "=====================================\n" RESET);
+        printf(RED "=====================================\n" RESET);
         printf("Entrez votre choix: ");
 
         if (fgets(input, sizeof(input), stdin) != NULL) {//Lecture de l'entrée utilisateur avec stdin, un fichier reliée au clavier
@@ -60,7 +60,7 @@ int main() {
                 stat_menu(athletes, athlete_count);
                 break;
             case 5:
-                printf("Merci d'avoir utilisé CER-J-O Management. Au revoir !\n\n");
+                printf("Merci d'avoir utilisé Olympics Manager. Au revoir !\n\n");
                 return 0;
             default:
                 printf("Choix invalide. Veuillez réessayer.\n\n");
