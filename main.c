@@ -8,7 +8,7 @@ int main() {
     char input[10];  // buffer pour retenir l’entrée de l’utilisateur
     load_all_athletes(athletes, &athlete_count);
 
-    printf("★ Bienvenue sur l'outil de gestion"" " BLUE "C" YELW "E" BLACK "R-" GREEN "J-" RED "O" CYAN "  MANAGEMENT" RESET " ★\n\n"RESET);
+    printf("★ Bienvenue sur l'outil de gestion"" " BLUE "OL" YELW "YM" BLACK "PI" GREEN "C" RED "S" CYAN "  MANAGER" RESET " ★\n\n"RESET);
     system_clear();
 
     while (1) {
@@ -16,7 +16,7 @@ int main() {
             printf(BLUE "°" YELW "ₒ" BLACK "°" GREEN "ₒ" RED "°" RESET"  ");
         }
         printf("\n\n");
-        printf("                 " BLUE "C" YELW "E" BLACK "R-" GREEN "J-" RED "O" CYAN " MANAGEMENT \n\n"RESET);
+        printf("                 " BLUE "OL" YELW "YM" BLACK "PI" GREEN "C" RED "S" CYAN " MANAGER \n\n"RESET);
         for (int i = 0; i < 8; i++) {
             printf(BLUE "°" YELW "ₒ" BLACK "°" GREEN "ₒ" RED "°" RESET"  ");
         }
