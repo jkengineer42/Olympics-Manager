@@ -42,7 +42,7 @@ Pour compiler et lancer le projet, utiliser ceci dans votre terminal :
 
 1 - **Compiler le programme**
 ```bash
-  gcc -o main main.c functions.c file.c -I.
+  gcc -o main main.c function.h file.h -I.
 ```
 2 - **Executer le programme**
 ```bash
