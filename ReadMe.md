@@ -8,7 +8,7 @@
   <a href="https://github.com/jkengineer42/Olympics-Manager">
     <img alt="Issues" src="https://img.shields.io/github/issues/jkengineer42/Olympics-Manager?style=for-the-badge">
     </a>
-  <a href="https://github.com/deltahmed/Click-Journey">
+  <a href="https://github.com/jkengineer42/Olympics-Manager">
     <img alt="Forks" src="https://img.shields.io/github/forks/jkengineer42/Olympics-Manager.svg?style=for-the-badge"></a>
   <a href="https://github.com/jkengineer42/Olympics-Manager">
     <img alt="Stars" src="https://img.shields.io/github/stars/jkengineer42/Olympics-Manager.svg?style=for-the-badge"></a>
