@@ -28,7 +28,7 @@
 * [Contributors](#contributors)
 * [License](#license)
 
-**CER-J-O Management** est un programme codé en langage C qui permet à un entraîneur de consulter et analyser les performances de ses athlètes. L'entraîneur pourra notamment saisir de nouvelles performances et les analyser grâce à des outils de statistiques avancées.
+**Olympics Manager** est un programme codé en langage C qui permet à un entraîneur de consulter et analyser les performances de ses athlètes. L'entraîneur pourra notamment saisir de nouvelles performances et les analyser grâce à des outils de statistiques avancées.
 
 ## Pré-requis
 
