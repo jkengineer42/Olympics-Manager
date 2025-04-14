@@ -1,5 +1,32 @@
+<h1 align="center"> 
+🏊 Olympics Manager 🏊
+</h1>
+</p>
+<p align="center"> 
+  <a href="https://github.com/jkengineer42/Olympics-Manager">
+    <img src="https://img.shields.io/github/contributors/jkengineer42/Olympics-Manager.svg?style=for-the-badge" alt="Contributors" /> </a>
+  <a href="https://github.com/jkengineer42/Olympics-Manager">
+    <img alt="Issues" src="https://img.shields.io/github/issues/jkengineer42/Olympics-Manager?style=for-the-badge">
+    </a>
+  <a href="https://github.com/deltahmed/Click-Journey">
+    <img alt="Forks" src="https://img.shields.io/github/forks/jkengineer42/Olympics-Manager.svg?style=for-the-badge"></a>
+  <a href="https://github.com/jkengineer42/Olympics-Manager">
+    <img alt="Stars" src="https://img.shields.io/github/stars/jkengineer42/Olympics-Manager.svg?style=for-the-badge"></a>
+  <a href="https://raw.githubusercontent.com/jkengineer42/Olympics-Manager/master/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License" /> </a>
+</p>
 
-# CER-J-O Management
+
+## Table of Contents
+
+* [About The Project](#about-the-project)
+  * [Built With](#built-with)
+* [Installation and usage](#installation-and-usage)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation-and-usage)
+  * [Usage](#usage)
+* [Contributors](#contributors)
+* [License](#license)
 
 **CER-J-O Management** est un programme codé en langage C qui permet à un entraîneur de consulter et analyser les performances de ses athlètes. L'entraîneur pourra notamment saisir de nouvelles performances et les analyser grâce à des outils de statistiques avancées.
 
